@@ -1,0 +1,99 @@
+:root {
+    --main-bg-color: #F5F5F5;
+    --main-color-palette: #424DA3;
+    --main-color-white: #ffffff;
+    --secondary-color-gray: #B2B2B2;
+    --secondary-color-blue: #A5D1FE;
+    --secondary-color-yellow: #FFC943;
+
+  }
+
+ 
+
+/* fonts */
+
+  @font-face {
+    font-family: "Metropolis";
+    src: url("metropoli-font/");
+  }
+
+.form {
+  width: 100%;
+  margin: auto;
+
+}
+
+form .form-group {
+  position: relative;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+label, button {
+  font-family: 'Metropolis', sans-serif;
+  font-size: 15px;
+}
+
+input, textarea {
+  font-size: 15px;
+  display: block;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #F5F5F5;
+  resize: none;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label {
+  position: absolute;
+  top: -16px;
+  font-size: 12px;
+  color: var(--main-color-palette);
+}
+
+label {
+  position: absolute;
+  left: 5px;
+  top: -5px;
+  transition: 0.6s ease all;
+  pointer-events: none;
+}
+
+.label {
+  position: relative;
+  display: block;
+  width: 80%;
+}
+
+.label::before {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: var(--main-color-palette);
+  transition: 0.3s ease all;
+  left: 0%;
+}
+
+input:focus~.label::before,textarea:focus~.label::before {
+  width: 100%;
+}
+
+button {
+  font-weight: bold;
+  color: var(--main-color-white);
+  border: none;
+}
+
+button:focus, button:active {
+  background-color: var(--secondary-color-blue);
+}
+
+.img-contact-footer {
+  text-align: center;
+  width: 100%;
+}

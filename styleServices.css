@@ -1,0 +1,36 @@
+
+:root {
+    --main-bg-color: #F5F5F5;
+    --main-color-palette: #424DA3;
+    --main-color-white: #ffffff;
+    --secondary-color-gray: #B2B2B2;
+    --secondary-color-blue: #A5D1FE;
+    --secondary-color-yellow: #FFC943;
+
+  }
+
+.services-grey-bg {
+    background-color: var(--main-color-white);
+}
+
+.containerServices {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.graphics-div {
+    width: 100%;
+    box-shadow: 0px 20px 25px #F5F5F5;
+}
+
+.p-description--grey {
+    font-size: 15px;
+    color: var(--secondary-color-gray);
+    padding: 0px 15px 15px 15px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.graphics-div {
+    height: auto;
+}

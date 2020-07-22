@@ -1,0 +1,18 @@
+.margarita-container {
+    height: 195px;
+    overflow: hidden;
+}
+
+.margarita-container img {
+    width: 100%;
+}
+
+.margarita-text {
+    padding-bottom: 4rem;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.btn-align-left {
+    margin: 2rem 0;
+}

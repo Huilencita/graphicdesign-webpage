@@ -1,0 +1,26 @@
+.section-centered {
+    margin-top: 4rem;
+}
+
+.img-cover {
+    height: 195px;
+    overflow: hidden;
+}
+
+.img-cover .img-cropped-1 {
+    height: 195px;
+    object-fit: cover;
+    object-position: 0px -70px;
+}
+
+.img-cover .img-cropped-2 {
+    height: 195px;
+    object-fit: cover;
+    object-position: 0px -65px;
+}
+
+.img-cover .img-cropped-3 {
+    height: 195px;
+    object-fit: cover;
+    object-position: 0px -55px;
+}
