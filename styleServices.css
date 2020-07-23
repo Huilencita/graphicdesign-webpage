@@ -34,3 +34,19 @@
 .graphics-div {
     height: auto;
 }
+
+@media all and (min-width: 768px) {
+    .services-grey-bg {
+        margin-top: 4rem;
+    }
+
+    .containerServices h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .containerServices h4 {
+        font-size: 1.5rem;
+    }
+}

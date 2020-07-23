@@ -24,3 +24,35 @@
     object-fit: cover;
     object-position: 0px -55px;
 }
+
+@media all and (min-width: 768px) {
+    h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 2rem;
+    }
+    
+    h4 {
+        font-size: 1.5rem;
+        margin: 3rem;
+    }
+
+    .img-cover {
+        height: 300px;
+    }
+
+    .img-cover .img-cropped-1 {
+        height: 300px;
+        object-position: 0px -250px;
+    }
+    
+    .img-cover .img-cropped-2 {
+        height: 300px;
+        object-position: 0px -155px;
+    }
+    
+    .img-cover .img-cropped-3 {
+        height: 300px;
+        object-position: 0px -95px;
+    }
+}

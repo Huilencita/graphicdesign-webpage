@@ -176,8 +176,6 @@ path.svg-isologo:hover, .svg-isologo:active, .svg-isologo:focus  {
     fill: var(--secondary-color-blue);
 }
 
-
-
 .a{
     fill:none;
     stroke:#000;
@@ -280,7 +278,7 @@ svg:hover .a {
 
 .p-index--about {
      font-size: 15px;
-     width: 248px;
+     line-height: 1.4;
      text-align: left;
  }
 
@@ -299,17 +297,16 @@ svg:hover .a {
 
 .footer-contact-btn:hover {
     background-color: var(--main-color-white);
-}
-
-.footer-contact-btn:hover a {
     color: var(--secondary-color-blue);
 }
+
+
 
 .footer-h3 {
     color: var(--main-color-white);
 }
 
-.button-classes a {
+.button-classes {
     font-weight: bold;
     color: var(--main-color-white);
 }
@@ -363,7 +360,6 @@ svg:hover .a {
 .services-grey-bg {
     background-color: var(--main-bg-color);
     padding-top: 5rem;
-    margin-top: 5rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -471,7 +467,7 @@ svg:hover .a {
 
 .hr-last {
     width: 80%;
-    background-color: var(--secondary-color-gray);
+
     color: black;
     margin: 5rem auto;
 } 
@@ -489,9 +485,91 @@ svg:hover .a {
     stroke: var(--main-color-white);
 }
 
-
-
 /* tablet */
+
+@media all and (min-width: 768px) {
+
+    .container h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .section p {
+        font-size: 20px;
+        width: 80%;
+        text-align: justify;
+    } 
+    
+    .container h4 {
+        font-size: 1.5rem;
+        margin: 3rem;
+    }
+    .container .section {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .first-section {
+        margin-top: 4rem;
+    }
+   
+    .meter-content {
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+  
+    .meter-content p {
+        width: auto;
+    }
+    .flex-items {
+        align-items: center;
+    }
+    .flex-items h4 {
+        margin: 1rem;
+        margin-left: 0px;
+    }
+
+    .services-grey-bg .graphics-div {
+        width: 50%;
+        height: 20rem;
+        align-content: space-between;
+    }
+    .graphics-div h4 {
+        text-align: center;
+    }
+
+    .blog-center p {
+        text-align: center;
+    }
+
+    .second-list h3 {
+        text-align: center;
+    }
+    .second-list--flexItems {
+        justify-content: center;
+    }
+    .third-list {
+        text-align: center;
+    }
+    .third-list >* {
+        margin-bottom: 1rem;
+    }
+    .section-nonPadding h3 {
+        text-align: center;
+    }
+    .section-nonPadding hr {
+        margin:  0 auto;
+        margin-top: 30px;
+    }
+    .section-centered h2 {
+        font-size: 2.5rem;
+        margin: 2rem;
+    }
+ 
+}
 
 /* desktop */
 
