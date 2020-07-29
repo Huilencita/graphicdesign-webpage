@@ -58,3 +58,42 @@
     }
     
 }
+
+@media all and (min-width: 992px) {
+    .container-articles {
+        margin: 0 6rem;
+        padding: 0px;
+    }
+
+    .container-articles .section >* {
+        justify-content: left;
+    }
+    .section .articles-nonContent {
+        width: 50%;
+        margin: 0px auto;
+        justify-content: center;
+        margin-top: 3.5rem;
+    }
+
+    .container-articles .section {
+        padding: 0px;
+    }
+
+    .container-articles .section h2 {
+        font-size: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .container-articles .section h3 {
+        padding: 0px;
+        margin: 0px;
+        padding-top: 15px;
+        margin-top: 2rem;
+    }
+
+    
+
+
+
+
+}

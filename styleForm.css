@@ -108,3 +108,65 @@ button:focus, button:active {
     margin: 2rem;
   }
 }
+
+@media all and (min-width: 992px) {
+  .container {
+    margin: 0 6rem;
+  }
+  .container .section {
+    padding: 0px;
+  }
+  .container .section {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .section h2 {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    text-align: left;
+    margin: 0px;
+  }
+  .container hr {
+    margin: 1rem 0;
+  }
+  .form-xl {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .container img {
+    width: 35%;
+  }
+  .container form {
+    width: 45%;
+  }
+  form {
+    margin-top: 3rem;
+    width: 100%;
+  }
+  form .button-classes {
+    margin: 0;
+    margin-top: 3rem;
+  }
+  .container .hr-last {
+    width: 100%;
+    margin-top: 4rem;
+  }
+
+  .form-xl img {
+    order: 1;
+  }
+
+  .form-xl form {
+    order: 2;
+  }
+  input , textarea {
+    width: 100%;
+  }
+  .footer {
+    margin: 0px;
+  }
+    
+}

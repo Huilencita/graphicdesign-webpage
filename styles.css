@@ -530,7 +530,7 @@ svg:hover .a {
         font-size: 1.5rem;
         margin: 3rem;
     }
-    .container .section , .section-a--l , .section-a--r {
+    .container .section , .section-a--l , .section-a--r , .form-xl {
         display: flex;
         flex-direction: column;
         justify-items: center;
