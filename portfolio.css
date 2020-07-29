@@ -24,7 +24,15 @@
     object-fit: cover;
     object-position: 0px -55px;
 }
+.img-cover img {
+    transition: transform .2s;
+}
 
+.img-cover:hover img {
+    -ms-transform: scale(0.9); 
+    -webkit-transform: scale(0.9); 
+    transform: scale(0.9); 
+}
 @media all and (min-width: 768px) {
     h2 {
         font-size: 2.5rem;
@@ -55,4 +63,77 @@
         height: 300px;
         object-position: 0px -95px;
     }
+}
+
+@media all and (min-width: 992px) {
+
+    .container-articles {
+        margin: 0rem 6rem;
+        
+    }
+    .container-articles .section-nonPadding {
+        display: flex;
+        flex-direction: column;
+        justify-items: initial;
+        align-items: initial;
+        padding: 0px 0px;
+        justify-content: space-between;
+    }
+    .section-nonPadding hr {
+        margin: 0 0;
+        margin-top: 15px;
+    }
+
+    .section-nonPadding h3 {
+        text-align: left;
+        margin: 0rem;
+        padding-left: 0px;
+    }
+
+    .container h4 {
+        margin: 0px;
+        font-size: 1.25rem;
+    }
+   
+    .section-nonPadding p {
+        font-size: 0.9rem;
+        text-align: left;
+        line-height: 1.2;
+        width: 100%;
+        padding-top: 5px;
+    }
+    .section-nonPadding h2 {
+        font-size: 1.5rem;
+        text-align: left;
+        margin: 0px;
+        padding-left: 0px;
+    }
+   .content-xl {
+       display: flex;
+       flex-direction: row;
+       margin-bottom: 2rem;
+       justify-content: space-between;
+   }
+   .content-xl .portfolio-boxShadow {
+       width: 48%;
+   }
+   h4 {
+       margin: 0px;
+   }
+   .img-cover .img-cropped-1 {
+        object-fit: cover;
+        object-position: 0px  -4.375rem;
+    }
+
+    .img-cover .img-cropped-2 {
+        object-fit: cover;
+        object-position: 0px -65px;
+    }
+
+    .img-cover .img-cropped-3 {
+        object-fit: cover;
+        object-position: 0px -10px;
+    }
+
+    
 }

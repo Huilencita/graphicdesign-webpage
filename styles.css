@@ -37,17 +37,17 @@ ul {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 1.8rem;
 }
 
 h3 {
     color: var(--secondary-color-gray);
-    font-size: 15px;
+    font-size: 0.9rem;
     font-weight: normal;
 }
 
 .h4-align {
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
     padding-bottom: 22px;
 }
@@ -68,6 +68,11 @@ hr {
     margin: auto 0;
     margin-top: 15px;
 }
+
+.d-display {
+    display: none;
+}
+
 
 /* INDEX STYLES */
 body.body-index {
@@ -97,7 +102,7 @@ body.body-index {
 
 h1.h1-index {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.8rem;
 }
 
 .a-index:link, .a-index:visited, .a-index:active {
@@ -106,7 +111,7 @@ h1.h1-index {
 }
 
 .a-index {
-    font-size: 15px;
+    font-size: 0.9rem;
     font-weight: 700;
     background-color: #424DA3;
     color: var(--main-color-white);  
@@ -117,13 +122,20 @@ h1.h1-index {
 
 /* mobile */
 
+.home-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--main-color-white);
+}
+
 .primary-list ul li a {
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 1.8rem;
 }
 
 .third-list a {
-    font-size: 15px;
+    font-size: 0.9rem;
     text-decoration: underline;
 } 
 
@@ -271,13 +283,13 @@ svg:hover .a {
     line-height: 1.6;
 }
 .p-index--description {
-    font-size: 15px;
+    font-size: 0.9rem;
     width: 238px;
     line-height: 1.8;
 }
 
 .p-index--about {
-     font-size: 15px;
+     font-size: 0.9rem;
      line-height: 1.4;
      text-align: left;
  }
@@ -312,8 +324,8 @@ svg:hover .a {
 }
 
 .about-contact-button {
-   width: 9rem;
-    margin-top: 4rem;
+    width: 9rem;
+    margin-top: 2rem;
 }
 
 .meter-content {
@@ -361,10 +373,23 @@ svg:hover .a {
     background-color: var(--main-bg-color);
     padding-top: 5rem;
     width: 100%;
+    
+    padding-bottom: 3rem;
+}
+
+.services-grey-bg .content div {
+    align-content: center;
+}
+
+.services-grey-bg .d-flex {
+    width: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 3rem;
+}
+
+.section-centered .t-align h3 {
+    text-align: center;
 }
 
 .h2-textAlign {
@@ -407,7 +432,7 @@ svg:hover .a {
     align-items: center;
     justify-content: center;
     width: 10rem;
-    font-size: 15px;
+    font-size: 0.9rem;
     color: var(--main-color-white);
     margin: 18px auto 22px auto;
 }
@@ -447,7 +472,7 @@ svg:hover .a {
 .blue-quote h2 {
     color: var(--main-color-white);
     text-align: center;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 
 .section-centered {
@@ -459,9 +484,9 @@ svg:hover .a {
     align-items: center;
 }
 
-.section-centered h2 {
+.section-centered .t-align h2 {
     color: var(--main-color-white);
-    font-size: 25px;
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -496,7 +521,7 @@ svg:hover .a {
     }
 
     .section p {
-        font-size: 20px;
+        font-size: 1.25rem;
         width: 80%;
         text-align: justify;
     } 
@@ -505,11 +530,15 @@ svg:hover .a {
         font-size: 1.5rem;
         margin: 3rem;
     }
-    .container .section {
+    .container .section , .section-a--l , .section-a--r {
         display: flex;
         flex-direction: column;
         justify-items: center;
         align-items: center;
+    }
+
+    .d-display {
+        display: none;
     }
 
     .first-section {
@@ -533,9 +562,12 @@ svg:hover .a {
     }
 
     .services-grey-bg .graphics-div {
-        width: 50%;
+        width: 20rem;
         height: 20rem;
         align-content: space-between;
+        margin: 3rem 0px;
+        
+        
     }
     .graphics-div h4 {
         text-align: center;
@@ -564,7 +596,7 @@ svg:hover .a {
         margin:  0 auto;
         margin-top: 30px;
     }
-    .section-centered h2 {
+    .t-align h2 {
         font-size: 2.5rem;
         margin: 2rem;
     }
@@ -573,4 +605,196 @@ svg:hover .a {
 
 /* desktop */
 
+@media all and (min-width: 992px) {
+    
+    .container .section {
+        display: flex;
+        flex-direction: row;
+        justify-items: initial;
+        align-items: initial;
+        padding: 0px 0px;
+        justify-content: space-between;
+    }
 
+
+    .section-a--l , .section-a--r {
+        display: block;
+    }
+    
+    .d-display {
+        display: block;
+    }
+
+    .section-a--r img {
+        width: 100%;
+    }
+
+    .section-a--r {
+        width: 40%;
+    }
+
+    .section-a--l {
+        padding-left: 6rem;
+        padding-top: 6rem;
+    }
+    .section-a--l h2 , p {
+        text-align: left;
+        margin: 0rem;
+    }
+
+    .container h4 {
+        margin: 0px;
+    }
+    .container br {
+        display: none;
+    }
+
+    .about-contact-button {
+        margin: 0px;
+        margin-top: 3rem;
+    }
+
+    .section-a--l h2 {
+        font-size: 3rem;
+    }
+
+    .section-a--l p {
+        font-size: 0.9rem;
+        text-align: left;
+        line-height: 1.2;
+        width: 100%;
+        padding-top: 5px;
+    }
+
+    .section-a--l img {
+        height: 80%;
+        align-content: center;
+    }
+    .section-m {
+        box-sizing: border-box;
+        align-self: center;
+        padding-right: 6rem;
+    }
+    .section-a--r h2 {
+        font-size: 1.5rem;
+        text-align: left;
+        margin: 0px;
+    }
+    .section-a--r p {
+        text-align: initial;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        width: initial;
+        padding-right: 5px;
+    }
+    .section-a--r hr {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .meter-content {
+        width: 100%;
+        padding-top: 1rem;
+    }
+    .meter {
+        height: 10px;
+    }
+
+    .services-grey-bg {
+        box-sizing: border-box;
+        padding: 0px;
+        width: initial;
+    }
+    
+    .services-grey-bg .d-flex {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: -webkit-fill-available;
+        margin: 0 6rem;
+       
+    }
+
+    .d-flex .graphics-div {
+        margin: 0.5rem;
+        height: 8rem;
+      
+    }
+    .graphics-div img {
+        width: 4rem;
+    }
+
+    .services-grey-bg h2 , .section-nonPadding h2 {
+        font-size: 1.5rem;
+        margin: 0px;
+    }
+
+    .services-grey-bg h4 {
+        font-size: 1.25rem;
+    }
+    .services-grey-bg h3 {
+        margin-top: 2rem;
+    }
+
+    .seeMore-button {
+        margin: 3rem auto;
+    }
+    .section-nonPadding .d-flex-2 {
+        display: flex;
+        flex-direction: row;
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+
+    .h4-align {
+        padding-bottom: 0px;
+    }
+
+    .portfolio-boxShadow .img {
+        margin-top: 0px;
+    }
+    .container .blog-center {
+        flex-direction: column;
+        text-align: center;
+    }
+    .blog-center p {
+        width: auto;
+    }
+    footer .hr-last {
+        margin: 3rem auto;
+    }
+    .section-centered {
+        flex-direction: row;
+        padding: 0px 6rem;
+        justify-content: space-between;
+    }
+    .section-centered a {
+        order: 3;
+    }
+    .section-centered img {
+        order: 1;
+    }
+    .section-centered .t-align {
+        order: 2;
+    }
+    .section-centered .t-align h3 , h2 {
+        text-align: left;  
+    }
+    .section-centered .t-align h2 {
+        margin: 0px;
+        text-align: left;
+    }
+    .section-centered >* {
+        margin-left: 1rem;
+    }
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 6rem;
+    }
+
+}   

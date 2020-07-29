@@ -31,11 +31,11 @@ form .form-group {
 
 label, button {
   font-family: 'Metropolis', sans-serif;
-  font-size: 15px;
+  font-size: 0.9rem;
 }
 
 input, textarea {
-  font-size: 15px;
+  font-size: 0.9rem;
   display: block;
   width: 80%;
   border: none;
@@ -50,7 +50,7 @@ input:focus, textarea:focus {
 input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label {
   position: absolute;
   top: -16px;
-  font-size: 12px;
+  font-size: 0.9rem;
   color: var(--main-color-palette);
 }
 
