@@ -1,18 +1,13 @@
+// Aparezco el Go Top
 window.onscroll = function(){
-    if(document.documentElement.scrollTop > 100){
-        console.log(document.documentElement.scrollTop > 100)
-        document.querySelector('.go-top-container')
-        .classList.add('show');
-    }else{
-        document.querySelector('.go-top-container')
-        .classList.remove('show');
+    if(document.documentElement.scrollTop > 100) {
+        document.querySelector('.go-top').classList.add('show');
+    } else {
+        document.querySelector('.go-top').classList.remove('show');
     }
 }
 
-document.querySelector('.go-top-container')
-.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
+// Nav toggler
+function toggleNav() {
+    document.querySelector('body').classList.toggle('nav-open');
+}

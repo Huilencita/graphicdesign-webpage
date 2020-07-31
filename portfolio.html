@@ -12,8 +12,8 @@
     <title>Francisco Chocobar - GD</title>
 </head>
 <body>
-    <header>
-        <nav class="fixed-general-nav">
+    <header id="header">
+        <div class="fixed-general-nav">
             <div class="home-container">
                 <div class="visible-menu">
                     <a href="home.html">
@@ -22,52 +22,72 @@
                         </svg>
                     </a>
                     <h1 class="toggle-brandName">Francisco Chocobar</h1>
-                    <a class="active-button" href="#">
-                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="22" viewBox="0 0 32 22">
+                    <button class="toggle-button" onclick="toggleNav();">
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="22" viewBox="0 0 32 22" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px">
                             <g transform="translate(1 1)">
                                 <line class="a" x2="30"/>
                                 <line class="a" x2="30" transform="translate(0 10)"/>
                                 <line class="a" x2="15" transform="translate(15 20)"/>
                             </g>
                         </svg>
-                    </a>
-                    <a class="toggle-button" href="#"><img src="assets/menu-close.svg" alt="x cerrar menu"></a>
+                        <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="32.828" height="32.828" viewBox="0 0 32.828 32.828">
+                            <g transform="translate(1.414 1.414)">
+                                <line class="a" x2="30" y2="30"/>
+                                <line class="a" y1="30" x2="30"/>
+                            </g>
+                        </svg>
+                    </button>
                 </div>
-                <div class="toggle-menu">
-                    <div class="primary-list">
-                        <ul>
+                <div class="toggle-menu"  style="transform: translateX(100%);">
+                    <nav>
+                        <button class="toggle-button" onclick="toggleNav();">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32.828" height="32.828" viewBox="0 0 32.828 32.828" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px">
+                                <g transform="translate(1.414 1.414)">
+                                    <line class="a" x2="30" y2="30"/>
+                                    <line class="a" y1="30" x2="30"/>
+                                </g>
+                            </svg>
+                        </button>
+                        <div class="main-nav">
                             <h3>Menu</h3>
-                            <li><a href="home.html">Inicio</a></li>
-                            <li><a href="services.html">Servicios</a></li>
-                            <li><a href="portfolio.html">Proyectos</a></li>
-                            <li><a href="articles.html">Blog</a></li>
-                            <li><a href="contact.html">Contacto</a></li>
-                        </ul>
-                    </div>
-                    <div class="second-list">
-                        <ul>
+                            <a class="nav-link active" href="home.html">Inicio</a>
+                            <a class="nav-link" href="services.html">Servicios</a>
+                            <a class="nav-link" href="portfolio.html">Proyectos</a>
+                            <a class="nav-link" href="articles.html">Blog</a>
+                            <a class="nav-link" href="contact.html">Contacto</a>
+                        </div>
+                        <div class="social-nav">
                             <h3>Social</h3>
-                            <div class="second-list--flexItems">
-                                <li><a href="https://www.facebook.com/Franchocodigital-115216583566941/"><img src="assets/icon-facebook.svg" alt="logo de facebook"></a></li>
-                                <li><a href="https://twitter.com/Franchdigital?s=08"><img src="assets/icon-twitter.svg" alt="logo de twitter"></a></li>
-                                <li><a href="https://www.instagram.com/franchocodigital/"><img src="assets/icon-instagram.svg" alt="logo de instagram"></a></li>
-                                <li><a href=""><img src="assets/icon-linkedin.svg" alt="logo de linkedin"></a></li>
-                            </div>
-                        </ul>     
-                    </div>
-                    <div class="third-list">
-                        <h3>Contactame</h3>
-                        <a class="third-list--mail" href="mailto:franciscochocobar@gmail.com">franciscochocobar@gmail.com</a>
-                    </div>
-                </div> 
-            </div> 
-        </nav>
-    </header>
-    <div class="go-top-container">
-        <div class="go-top-button">
-            <i class="fas fa-chevron-up"></i>
+                            <a href="https://www.facebook.com/Franchocodigital-115216583566941/">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                                    <circle cx="22.5" cy="22.5" r="22.5" fill="none" stroke="#000"/>
+                                    <path fill="none" stroke="#000" d="M18,2H15a5,5,0,0,0-5,5v3H7v4h3v8h4V14h3l1-4H14V7a1,1,0,0,1,1-1h3Z" transform="translate(10.5 10.5)"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/Franchdigital?s=08">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                                    <circle class="c" cx="22.5" cy="22.5" r="22" fill="none" stroke="#000" />
+                                    <path fill="none" stroke="#000" d="M21,3A9.909,9.909,0,0,1,18.145,4.39,4.073,4.073,0,0,0,11,7.117v.909A9.691,9.691,0,0,1,2.818,3.908S-.818,12.09,7.364,15.726A10.582,10.582,0,0,1,1,17.545c8.182,4.545,18.182,0,18.182-10.455a4.091,4.091,0,0,0-.073-.755A7.018,7.018,0,0,0,21,3Z" transform="translate(11.5 11.51)"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/franchocodigital/">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                                    <circle cx="22.5" cy="22.5" r="22.5" fill="none" stroke="#000" />
+                                    <rect stroke="#000" fill="none" width="20" height="20" rx="5" transform="translate(13 13)"/>
+                                    <path stroke="#000" fill="none" d="M16,11.37A4,4,0,1,1,12.63,8,4,4,0,0,1,16,11.37Z" transform="translate(11 11)"/>
+                                    <line stroke="#000" fill="none" transform="translate(28.5 17.5)"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="contact">
+                            <h3>Contactame</h3>
+                            <a  href="mailto:franciscochocobar@gmail.com">franciscochocobar@gmail.com</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </div>
-    </div>
+    </header>
     <div class="container-articles">
         <section class="section-nonPadding first-section">
             <h3>Mis proyectos</h3>
@@ -107,99 +127,37 @@
         </section>
     </div>
     <footer>
-        <section class="section-centered">
-            <div class="t-align">
-                <h3 class="footer-h3 b-block">¡Hola!</h3>
-                <h2>¿Tienes un proyecto en mente?</h2>
-            </div>
-            <a class="about-contact-button  button-classes footer-contact-btn"   href="contact.html">Contáctame</a>
-            <img src="assets/Enmascarar grupo 1.svg" alt="">
-        </section>
-        <hr class="hr-last">
-        <div class="footer">
-            <div class="second-list">
-        <ul>
-            <h3>Social</h3>
-            <div class="second-list--flexItems">
-                <li><a href="https://www.facebook.com/Franchocodigital-115216583566941/"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
-                    <defs>
-                        <style>
-                        .fb-svg,.c{
-                            fill:none;
-                        }
-                        .fb-svg{
-                            stroke:#000;
-                            stroke-linecap:round;
-                            stroke-linejoin:round;
-                        }
-                        .b{
-                            stroke:none;
-                        }
-                        </style>
-                    </defs>
-                    <g class="fb-svg">
-                        <circle class="b" cx="22.5" cy="22.5" r="22.5"/>
-                        <circle class="c" cx="22.5" cy="22.5" r="22"/>
-                    </g>
-                    <path class="fb-svg" d="M18,2H15a5,5,0,0,0-5,5v3H7v4h3v8h4V14h3l1-4H14V7a1,0,0,1,1-1h3Z" transform="translate(10.5 10.5)"/>
-                </svg></a></li>
-                <li><a href="https://twitter.com/Franchdigital?s=08">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
-                        <defs>
-                            <style>
-                                .fb-svg,.c{
-                                    fill:none;
-                                }
-                                .fb-svg{
-                                    stroke:#000;
-                                    stroke-linecap:round;stroke-linejoin:round;
-                                }.b{
-                                    stroke:none;
-                                }
-                            </style>
-                        </defs>
-                        <g class="fb-svg">
-                            <circle class="b" cx="22.5" cy="22.5" r="22.5"/>
-                            <circle class="c" cx="22.5" cy="22.5" r="22"/>
-                        </g>
-                            <path class="fb-svg" d="M21,3A9.909,9.909,0,0,1,18.145,4.39,4.073,4.073,0,0,0,11,7.117v.909A9.691,9.691,0,0,1,2.818,3.908S-.818,12.09,7.364,15.726A10.582,10.582,0,0,1,1,17.545c8.182,4.545,18.182,0,18.182-10.455a4.091,4.091,0,0,0-.073-.755A7.018,7.018,0,0,0,21,3Z" transform="translate(11.5 11.51)"/>
-                    </svg>
-                    </a>
-                </li>
-                <li><a href="https://www.instagram.com/franchocodigital/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
-                        <defs>
-                            <style>
-                                .fb-svg,.c{
-                                    fill:none;
-                                }
-                                .fb-svg{
-                                    stroke:#000;
-                                    stroke-linecap:round;stroke-linejoin:round;
-                                }
-                                .b{
-                                    stroke:none;
-                                }
-                            </style>
-                        </defs>
-                        <g class="fb-svg">
-                            <circle class="b" cx="22.5" cy="22.5" r="22.5"/>
-                            <circle class="c" cx="22.5" cy="22.5" r="22"/>
-                        </g>
-                        <rect class="fb-svg" width="20" height="20" rx="5" transform="translate(13 13)"/>
-                        <path class="fb-svg" d="M16,11.37A4,4,0,1,1,12.63,8,4,4,0,0,1,16,11.37Z" transform="translate(11 11)"/>
-                        <line class="a" transform="translate(28.5 17.5)"/>
-                    </svg>
-                </a></li>
-            </div>
-        </ul>     
-            </div>
-            <div class="third-list">
+        <div class="contact">
             <h3>Contactame</h3>
-            <a class="third-list--mail" href="mailto:franciscochocobar@gmail.   com">franciscochocobar@gmail.com</a>
-            </div>
+            <a  href="mailto:franciscochocobar@gmail.com">franciscochocobar@gmail.com</a>
+        </div>
+        <div class="social-nav">
+            <h3>Social</h3>
+            <a href="https://www.facebook.com/Franchocodigital-115216583566941/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                    <circle cx="22.5" cy="22.5" r="22.5" fill="none" stroke="#000"/>
+                    <path fill="none" stroke="#000" d="M18,2H15a5,5,0,0,0-5,5v3H7v4h3v8h4V14h3l1-4H14V7a1,1,0,0,1,1-1h3Z" transform="translate(10.5 10.5)"/>
+                </svg>
+            </a>
+            <a href="https://twitter.com/Franchdigital?s=08">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                    <circle class="c" cx="22.5" cy="22.5" r="22" fill="none" stroke="#000" />
+                    <path fill="none" stroke="#000" d="M21,3A9.909,9.909,0,0,1,18.145,4.39,4.073,4.073,0,0,0,11,7.117v.909A9.691,9.691,0,0,1,2.818,3.908S-.818,12.09,7.364,15.726A10.582,10.582,0,0,1,1,17.545c8.182,4.545,18.182,0,18.182-10.455a4.091,4.091,0,0,0-.073-.755A7.018,7.018,0,0,0,21,3Z" transform="translate(11.5 11.51)"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/franchocodigital/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                    <circle cx="22.5" cy="22.5" r="22.5" fill="none" stroke="#000" />
+                    <rect stroke="#000" fill="none" width="20" height="20" rx="5" transform="translate(13 13)"/>
+                    <path stroke="#000" fill="none" d="M16,11.37A4,4,0,1,1,12.63,8,4,4,0,0,1,16,11.37Z" transform="translate(11 11)"/>
+                    <line stroke="#000" fill="none" transform="translate(28.5 17.5)"/>
+                </svg>
+            </a>
         </div>
     </footer>
-<script src="js.js"></script>
+    <a class="go-top" href="#header">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    <script src="js.js"></script>
 </body>
 </html>
