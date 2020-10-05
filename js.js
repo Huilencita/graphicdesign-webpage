@@ -8,6 +8,8 @@ window.onscroll = function(){
 }
 
 // Nav toggler
+
 function toggleNav() {
     document.querySelector('body').classList.toggle('nav-open');
 }
+

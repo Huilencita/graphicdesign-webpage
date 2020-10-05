@@ -8,14 +8,21 @@
 
   }
 
- 
-
 /* fonts */
 
   @font-face {
     font-family: "Metropolis";
     src: url("metropoli-font/");
   }
+
+.service-xl {
+    padding: 25px 30px;
+}
+
+.container h2 {
+    text-align: left;
+    margin: 0;
+}
 
 .form {
   width: 100%;
@@ -37,7 +44,7 @@ label, button {
 input, textarea {
   font-size: 0.9rem;
   display: block;
-  width: 80%;
+  width: 100%;
   border: none;
   border-bottom: 1px solid #F5F5F5;
   resize: none;
@@ -65,7 +72,7 @@ label {
 .label {
   position: relative;
   display: block;
-  width: 80%;
+  width: 100%;
 }
 
 .label::before {
@@ -98,10 +105,34 @@ button:focus, button:active {
   width: 100%;
 }
 
+.form-xl {
+  --size: 250px;
+  --gap: 1rem;
+  --offset: calc((var(--size) + var(--gap)) / 2);
+  display: grid;
+  max-width: 1200px;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr));
+  grid-auto-rows: repeat(2, auto);
+  padding: 2rem 30px;
+  grid-gap: var(--gap);
+}
+
+footer {
+  grid-template-rows: 200px;
+}
+
+@media all and (min-width: 576px) {
+  .form-xl {
+    --size: 500px;
+    grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr));
+  }
+}
+
 @media all and (min-width: 768px) {
  
   form {
-    width: 80%;
+    width: 100%;
   }
 
   .section hr {
@@ -110,51 +141,6 @@ button:focus, button:active {
 }
 
 @media all and (min-width: 992px) {
-  .container {
-    margin: 0 6rem;
-  }
-  .container .section {
-    padding: 0px;
-  }
-  .container .section {
-    display: flex;
-    flex-direction: column;
-  }
-  .container .section h2 {
-    font-size: 1.5rem;
-    padding-top: 1rem;
-    text-align: left;
-    margin: 0px;
-  }
-  .container hr {
-    margin: 1rem 0;
-  }
-  .form-xl {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-  .container img {
-    width: 35%;
-  }
-  .container form {
-    width: 45%;
-  }
-  form {
-    margin-top: 3rem;
-    width: 100%;
-  }
-  form .button-classes {
-    margin: 0;
-    margin-top: 3rem;
-  }
-  .container .hr-last {
-    width: 100%;
-    margin-top: 4rem;
-  }
-
   .form-xl img {
     order: 1;
   }
@@ -162,11 +148,58 @@ button:focus, button:active {
   .form-xl form {
     order: 2;
   }
-  input , textarea {
-    width: 100%;
+  .service-xl {
+    --size: 350px;
+    --gap: 3rem;
+    --offset: calc((var(--size) + var(--gap)) / 2);
+    display: grid;
+    max-width: 1400px;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: repeat(1, auto);
+    padding: 2rem 6rem;
+    grid-gap: var(--gap);
   }
-  .footer {
-    margin: 0px;
+  .service-xl div {
+    grid-column-start: 2;
   }
-    
+
+  .form-xl {
+    --gap: 3rem;
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: 50% 50%;;
+    grid-template-rows: auto;
+    padding: 2rem 6rem;
+    grid-gap: var(--gap);
+  } 
+
+  .seeMore-button {
+  margin: 3rem 0;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .service-xl {
+    --gap: 4rem;
+    display: grid;
+    max-width: 1500px;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: repeat(1, auto);
+    padding: 2rem 6rem;
+    grid-gap: var(--gap);
+  }
+  .service-xl div {
+    grid-column-start: 2;
+  }
+
+  .form-xl {
+    --size: 350px;
+    --gap: 4rem;
+    display: grid;
+    max-width: 1500px;
+    grid-template-columns: 50% 50%;;
+    grid-template-rows: auto;
+    padding: 2rem 6rem;
+    grid-gap: var(--gap);
+  } 
 }

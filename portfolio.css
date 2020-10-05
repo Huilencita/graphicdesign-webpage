@@ -1,139 +1,74 @@
-.section-centered {
-    margin-top: 4rem;
+* { box-sizing: border-box; }
+
+.section-nonPadding {
+    padding: 0px;
 }
 
-.img-cover {
-    height: 195px;
-    overflow: hidden;
+.service-xl {
+    padding: 30px 25px;
 }
 
-.img-cover .img-cropped-1 {
-    height: 195px;
-    object-fit: cover;
-    object-position: 0px -70px;
+.section-nonPadding .service-xl >* {
+    text-align: left;
 }
 
-.img-cover .img-cropped-2 {
-    height: 195px;
-    object-fit: cover;
-    object-position: 0px -65px;
+.service-xl hr {
+    margin-left: 0px;
 }
 
-.img-cover .img-cropped-3 {
-    height: 195px;
-    object-fit: cover;
-    object-position: 0px -55px;
+.content-xl {
+    --size:300px;
+    --gap: 2rem;
+    --offset: calc((var(--size) + var(--gap)) / 2);
+    background-color: var(--main-color-white);
+    display: grid;
+    max-width: 1200px;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr));
+    grid-auto-rows: repeat(3, 300px);
+    grid-gap: var(--gap);
 }
+
 .img-cover img {
     transition: transform .2s;
 }
-
 .img-cover:hover img {
     -ms-transform: scale(0.9); 
     -webkit-transform: scale(0.9); 
     transform: scale(0.9); 
 }
+
 @media all and (min-width: 768px) {
-    h2 {
-        font-size: 2.5rem;
-        text-align: center;
-        margin: 2rem;
+    .content-xl {
+        --size: 250px;
+        grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr));
+        grid-auto-rows: auto;
+        padding: 0 6rem;
+    }
+    hr {
+        margin: 25px 0px;
     }
     
-    h4 {
-        font-size: 1.5rem;
-        margin: 3rem;
-    }
-
-    .img-cover {
-        height: 300px;
-    }
-
-    .img-cover .img-cropped-1 {
-        height: 300px;
-        object-position: 0px -250px;
-    }
-    
-    .img-cover .img-cropped-2 {
-        height: 300px;
-        object-position: 0px -155px;
-    }
-    
-    .img-cover .img-cropped-3 {
-        height: 300px;
-        object-position: 0px -95px;
-    }
 }
 
 @media all and (min-width: 992px) {
+    .content-xl {
+        --size: 360px;
+        grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr));
+        grid-auto-rows: auto;
+        padding: 0 6rem;
+    }
+    .section-nonPadding .service-xl {
+        padding: 0px 6rem;
+    }
+}
 
-    .container-articles {
-        margin: 0rem 6rem;
-        
+@media all and (min-width: 1440px) {
+    .content-xl {
+        --size: 420px;
+        max-width: 1500px;
+        grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr));
+        grid-auto-rows: auto;
+        padding: 0 6rem;
     }
-    .container-articles .section-nonPadding {
-        display: flex;
-        flex-direction: column;
-        justify-items: initial;
-        align-items: initial;
-        padding: 0px 0px;
-        justify-content: space-between;
-    }
-    .section-nonPadding hr {
-        margin: 0 0;
-        margin-top: 15px;
-    }
-
-    .section-nonPadding h3 {
-        text-align: left;
-        margin: 0rem;
-        padding-left: 0px;
-    }
-
-    .container h4 {
-        margin: 0px;
-        font-size: 1.25rem;
-    }
-   
-    .section-nonPadding p {
-        font-size: 0.9rem;
-        text-align: left;
-        line-height: 1.2;
-        width: 100%;
-        padding-top: 5px;
-    }
-    .section-nonPadding h2 {
-        font-size: 1.5rem;
-        text-align: left;
-        margin: 0px;
-        padding-left: 0px;
-    }
-   .content-xl {
-       display: flex;
-       flex-direction: row;
-       margin-bottom: 2rem;
-       justify-content: space-between;
-   }
-   .content-xl .portfolio-boxShadow {
-       width: 48%;
-   }
-   h4 {
-       margin: 0px;
-   }
-   .img-cover .img-cropped-1 {
-        object-fit: cover;
-        object-position: 0px  -4.375rem;
-    }
-
-    .img-cover .img-cropped-2 {
-        object-fit: cover;
-        object-position: 0px -65px;
-    }
-
-    .img-cover .img-cropped-3 {
-        object-fit: cover;
-        object-position: 0px -10px;
-    }
-
-    
 }

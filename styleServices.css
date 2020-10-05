@@ -6,98 +6,104 @@
     --secondary-color-gray: #B2B2B2;
     --secondary-color-blue: #A5D1FE;
     --secondary-color-yellow: #FFC943;
-
   }
 
-.services-grey-bg {
-    background-color: var(--main-color-white);
+
+
+.service-xl {
+    padding: 30px 25px;
 }
 
-.containerServices {
-    padding-left: 30px;
-    padding-right: 30px;
+.service-xl hr {
+    
+}
+
+.service-xl >* {
+    text-align: left;
+}
+
+.services-grey-bg {
+    --size: 250px;
+    --gap: 2rem;
+    --offset: calc((var(--size) + var(--gap)) / 2);
+    background-color: var(--main-color-white);
+    display: grid;
+    max-width: 1200px;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, 285px) 420px ;
+    grid-gap: var(--gap);
+    padding: 0px 25px;
 }
 
 .graphics-div {
     width: 100%;
     box-shadow: 0px 20px 25px #F5F5F5;
+    margin-top: 0px;
+    height: auto;
 }
 
 .p-description--grey {
     font-size: 0.9rem;
     color: var(--secondary-color-gray);
     padding: 0px 15px 15px 15px;
-    line-height: 1.4;
+    line-height: 1.2;
     text-align: center;
 }
 
-.graphics-div {
-    height: auto;
+@media all and (min-width: 480px) {
+    .services-grey-bg {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
 }
+
 
 @media all and (min-width: 768px) {
     .services-grey-bg {
-        margin-top: 4rem;
-    }
-
-    .containerServices .service-xl h2 {
-        font-size: 2.5rem;
-        text-align: center;
-        margin: 2rem;
-    }
-
-    .containerServices h4 {
-        font-size: 1.5rem;
-    }
-
-    .service-xl {
-        text-align: center;
-    }
-    .content-l , .content-r {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-    .services-grey-bg .graphics-div {
-        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-rows: repeat(2, auto);
+        padding-top: 2rem;
     }
 }
 
 @media all and (min-width: 992px) {
-    .containerServices {
-        margin: 0px 6rem;
-        padding: 0px;
-    }
     .service-xl {
-        text-align: left;
+        padding: 0px 6rem;
     }
-    .containerServices .service-xl h2 {
-        margin: 0px;
-        padding: 0px;
-        font-size: 1.5rem;
-        text-align: left;
-        padding-top: 1rem;
+
+    .graphics-div h4 {
+        padding-top: 0px;
     }
+
+    .graphics-div {
+        justify-content: space-evenly;
+    }
+
     .services-grey-bg {
-        align-items: flex-start;
+        --size: 300px;
+        --gap: 20px;
+        --offset: calc((var(--size) + var(--gap)) / 2);
+        display: grid;
+        max-width: 1200px;
+        padding: 0px 6rem;
+        grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr));
+        grid-auto-rows: repeat (2, 200px);
+        grid-gap: var(--gap);
+        padding-bottom: var(--offset);
+        padding-top: 2rem;
     }
-    .content {
-        display: flex;
-        flex-direction: row;
+
+    .services-grey-bg .graphics-div:nth-child(even) {
+        transform: translateY(var(--offset));
     }
-    .content-l {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        margin-right: 1rem;
-    }
-    .content-r {
-        width: 50%;
-        flex-direction: column;
-        justify-content: center;
-    }
+}
+
+@media all and (min-width: 1124px) {
+    .services-grey-bg {
+        --size: 420px;
+        grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr));
+        grid-template-rows: repeat(2, auto);
+        padding-top: 2rem;
     
-
-
+    }
 }
